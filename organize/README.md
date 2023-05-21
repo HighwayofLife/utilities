@@ -39,4 +39,4 @@ python test_image_organize.py
 
 ## LICENSE
 
-This script is licensed under the MIT License.
+This script is licensed under the [MIT License](../LICENSE)
