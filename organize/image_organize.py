@@ -74,6 +74,8 @@ def organize_images(args):
     print("Square directory: {}".format(DESTINATION_SQUARE_DIR))
     print("Portrait directory: {}".format(DESTINATION_PORTRAIT_DIR))
 
+    files_moved = 0
+
     for filename in os.listdir(SOURCE_DIR):
         # We're only interested in images, not other kind of files.
         if filename.lower().endswith(
@@ -99,8 +101,10 @@ def organize_images(args):
                 os.path.join(SOURCE_DIR, filename),
                 os.path.join(DESTINATION_DIR, destination_dir, filename),
             )
+            files_moved += 1
 
     print("Done! Organization complete.")
+    print(f"{files_moved} files moved to {DESTINATION_DIR}")
 
 
 if __name__ == "__main__":
